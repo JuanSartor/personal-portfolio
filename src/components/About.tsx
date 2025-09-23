@@ -56,7 +56,7 @@ export default function About() {
           <div className="relative">
             <div className="relative w-full h-96 bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl overflow-hidden shadow-xl">
              
-                <img src="/perfil-animado-sf.png" className="w-[200px] relative left-[95px]"></img>
+                <img src="/personal-portfolio/perfil-animado-sf.png" className="w-[200px] relative left-[95px]"></img>
              
               <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-primary-600/10 to-transparent"></div>
