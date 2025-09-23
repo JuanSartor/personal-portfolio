@@ -15,8 +15,14 @@ const jobs: Job[] = [
     type: "freelance",
     technologies: ["PHP", "WordPress", "MySQL", "Bootstrap"],
     details: [
-      "Desarrollo de CMS inmobiliario personalizado con PHP, Bootstrap y MySQL",
-      "Creación de tienda online para Bolsar Bolsas de Papel con WordPress",
+      <a href="   https://inmobiliarianova.com.ar/" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline hover:text-blue-700">
+        Desarrollo de CMS inmobiliario personalizado con PHP, Bootstrap y MySQL
+      </a>
+   
+      ,
+      <a href="https://bolsarbolsasdepapel.com.ar/" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline hover:text-blue-700">
+        Desarrollo de tienda online para Bolsar Bolsas de Papel con WordPress
+      </a>,
       "Implementación de funcionalidades avanzadas y optimización de rendimiento",
     ],
   },
@@ -27,7 +33,10 @@ const jobs: Job[] = [
     type: "remote",
     technologies: ["PHP", "JavaScript", "AWS", "MySQL", "Bootstrap"],
     details: [
-      "Migración completa de plataforma de salud a sistema de gestión empresarial",
+       <a href="https://github.com/JuanSartor/WorknCare_r" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline hover:text-blue-700">
+        Migración completa de plataforma de salud a sistema de gestión empresarial
+      </a>
+      ,
       "Desarrollo frontend con Bootstrap, HTML5, CSS3, JavaScript y jQuery",
       "Backend con PHP utilizando framework privado de la empresa",
       "Implementación y gestión de servicios AWS: S3, EC2, SES, RDS",
@@ -40,7 +49,10 @@ const jobs: Job[] = [
     type: "onsite",
     technologies: ["PHP", "MySQL", "SQL Server", "jQuery", "Bootstrap"],
     details: [
-      "Desarrollo de sistemas internos de gestión para procesos empresariales",
+         <a href="https://www.ellitoral.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline hover:text-blue-700">
+        Desarrollo de sistemas internos de gestión para procesos empresariales
+      </a>
+        ,
       "Frontend responsivo con Bootstrap, JavaScript y jQuery",
       "Backend robusto con PHP, MySQL y SQL Server",
       "Mantenimiento y optimización de aplicaciones existentes",
