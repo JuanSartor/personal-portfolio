@@ -34,7 +34,7 @@ export default function Navbar() {
             isScrolled ? 'text-primary-600' : 'text-secondary-900'
           }`}>
             <span className="bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent">
-              Juan Ignacio
+              Juan
             </span>{' '}
             <span className={isScrolled ? 'text-secondary-800' : 'text-secondary-900'}>
               Sartor

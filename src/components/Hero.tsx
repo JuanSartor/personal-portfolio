@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-4xl mx-auto">
         <div className="animate-fade-in">
           <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold bg-gradient-to-r from-secondary-900 via-primary-700 to-secondary-800 bg-clip-text text-transparent mb-6">
-            Hola, soy <span className="block lg:inline">Juan Ignacio Sartor</span>
+            Hola, soy <span className="block lg:inline">Juan Sartor</span>
           </h1>
         </div>
 
@@ -55,25 +55,26 @@ export default function Hero() {
             </span>
           </a>
 
-          <a
-            href="mailto:juansartor92@gmail.com"
+
+     <a
+          href="https://wa.me/5493482557191"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-secondary group"
           >
-            <span className="flex items-center gap-2">
-              <svg className="w-5 h-5 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              Contacto
-            </span>
-          </a>
+        
+        <span className="flex items-center gap-2">
+          <svg className="w-5 h-5 group-hover:scale-110 transition-transform text-green-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 .5C5.65.5.5 5.65.5 12c0 2.11.55 4.07 1.61 5.83L.5 23.5l5.79-1.59A11.46 11.46 0 0012 23.5c6.35 0 11.5-5.15 11.5-11.5S18.35.5 12 .5zm0 21c-1.84 0-3.63-.49-5.2-1.41l-.37-.22-3.44.95.94-3.35-.24-.39A9.46 9.46 0 012.5 12c0-5.25 4.25-9.5 9.5-9.5s9.5 4.25 9.5 9.5-4.25 9.5-9.5 9.5zm4.91-7.3c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.62.14-.19.27-.71.88-.87 1.06-.16.18-.32.2-.59.07-.27-.14-1.12-.41-2.14-1.31-.79-.7-1.33-1.57-1.49-1.84-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.62-1.5-.85-2.05-.22-.53-.45-.45-.62-.46h-.53c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29 0 1.34.98 2.63 1.11 2.81.14.18 1.94 2.96 4.7 4.16.66.29 1.18.46 1.59.59.67.21 1.28.18 1.76.11.54-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z" />
+          </svg>
+          WhatsApp
+        </span>
+
+    </a>
+    
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-soft">
-          <div className="w-6 h-10 border-2 border-primary-400 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-primary-400 rounded-full mt-2 animate-pulse"></div>
-          </div>
-        </div>
+  
       </div>
     </section>
   );
