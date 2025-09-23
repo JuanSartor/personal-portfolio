@@ -1,8 +1,9 @@
+import type { ReactNode } from 'react';
 type Job = {
   company: string;
   position: string;
   period: string;
-  details: string[];
+  details: ReactNode[];
   type: 'remote' | 'onsite' | 'freelance';
   technologies: string[];
 };
