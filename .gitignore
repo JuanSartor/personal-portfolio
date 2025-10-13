@@ -24,3 +24,10 @@ dist-ssr
 *.sw?
 
 src/components/Contact.tsx
+<<<<<<< HEAD
+=======
+
+# Variables de entorno
+.env
+.env.local
+>>>>>>> 6c3344d778e4cc64bd00a6159413489f57846c1b
