@@ -1,4 +1,7 @@
+import { useLanguage } from '../hooks/useLanguage';
+
 export default function Hero() {
+  const { t } = useLanguage();
   return (
     <section className="min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden px-6">
       {/* Background with subtle animation */}
@@ -14,15 +17,15 @@ export default function Hero() {
       <div className="relative z-10 max-w-4xl mx-auto">
         <div className="animate-fade-in">
           <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold bg-gradient-to-r from-secondary-900 via-primary-700 to-secondary-800 bg-clip-text text-transparent mb-6">
-            Hola, soy <span className="block lg:inline">Juan Sartor</span>
+            {t('hero.greeting')} <span className="block lg:inline">{t('hero.name')}</span>
           </h1>
         </div>
 
         <div className="animate-slide-up" style={{animationDelay: '0.3s'}}>
           <p className="text-xl lg:text-2xl text-secondary-600 max-w-3xl mx-auto mb-8 leading-relaxed">
-            Desarrollador <span className="font-semibold text-primary-600">Full Stack</span> con experiencia en Backend, Frontend y Cloud.
+            {t('hero.title')}
             <br className="hidden lg:block" />
-            Apasionado por crear soluciones escalables y eficientes.
+            {t('hero.subtitle')}
           </p>
         </div>
 

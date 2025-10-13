@@ -1,4 +1,6 @@
 import type { ReactNode } from 'react';
+import { useLanguage } from '../hooks/useLanguage';
+
 type Job = {
   company: string;
   position: string;
@@ -8,60 +10,62 @@ type Job = {
   technologies: string[];
 };
 
-const jobs: Job[] = [
+const getJobs = (t: (key: string) => string): Job[] => [
   {
-    company: "Profesional Independiente",
-    position: "Desarrollador Full Stack",
-    period: "2024 – Actualidad",
+    company: t('experience.companies.freelance'),
+    position: t('experience.positions.fullstack'),
+    period: t('experience.periods.current'),
     type: "freelance",
     technologies: ["PHP", "WordPress", "MySQL", "Bootstrap"],
     details: [
       <a href="   https://inmobiliarianova.com.ar/" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline hover:text-blue-700">
-        Desarrollo de CMS inmobiliario personalizado con PHP, Bootstrap y MySQL
+        {t('experience.descriptions.freelance1')}
       </a>
    
       ,
       <a href="https://bolsarbolsasdepapel.com.ar/" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline hover:text-blue-700">
-        Desarrollo de tienda online para Bolsar Bolsas de Papel con WordPress
+        {t('experience.descriptions.freelance2')}
       </a>,
-      "Implementación de funcionalidades avanzadas y optimización de rendimiento",
+      t('experience.descriptions.freelance3'),
     ],
   },
   {
-    company: "WorknCare",
-    position: "Desarrollador Full Stack",
-    period: "2021 – 2023",
+    company: t('experience.companies.workncare'),
+    position: t('experience.positions.fullstack'),
+    period: t('experience.periods.workncare'),
     type: "remote",
     technologies: ["PHP", "JavaScript", "AWS", "MySQL", "Bootstrap"],
     details: [
        <a href="https://github.com/JuanSartor/WorknCare_r" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline hover:text-blue-700">
-        Migración completa de plataforma de salud a sistema de gestión empresarial
+        {t('experience.descriptions.workncare1')}
       </a>
       ,
-      "Desarrollo frontend con Bootstrap, HTML5, CSS3, JavaScript y jQuery",
-      "Backend con PHP utilizando framework privado de la empresa",
-      "Implementación y gestión de servicios AWS: S3, EC2, SES, RDS",
+      t('experience.descriptions.workncare2'),
+      t('experience.descriptions.workncare3'),
+      t('experience.descriptions.workncare4'),
     ],
   },
   {
-    company: "El Litoral",
-    position: "Desarrollador Web",
-    period: "2019 – 2021",
+    company: t('experience.companies.ellitoral'),
+    position: t('experience.positions.webdev'),
+    period: t('experience.periods.ellitoral'),
     type: "onsite",
     technologies: ["PHP", "MySQL", "SQL Server", "jQuery", "Bootstrap"],
     details: [
          <a href="https://www.ellitoral.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline hover:text-blue-700">
-        Desarrollo de sistemas internos de gestión para procesos empresariales
+        {t('experience.descriptions.ellitoral1')}
       </a>
         ,
-      "Frontend responsivo con Bootstrap, JavaScript y jQuery",
-      "Backend robusto con PHP, MySQL y SQL Server",
-      "Mantenimiento y optimización de aplicaciones existentes",
+      t('experience.descriptions.ellitoral2'),
+      t('experience.descriptions.ellitoral3'),
+      t('experience.descriptions.ellitoral4'),
     ],
   },
 ];
 
 export default function Experience() {
+  const { t } = useLanguage();
+  const jobs = getJobs(t);
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'remote':
@@ -87,16 +91,16 @@ export default function Experience() {
 
   const getTypeLabel = (type: string) => {
     switch (type) {
-      case 'remote': return 'Remoto';
-      case 'freelance': return 'Freelance';
-      default: return 'Presencial';
+      case 'remote': return t('experience.workTypes.remote');
+      case 'freelance': return t('experience.workTypes.freelance');
+      default: return t('experience.workTypes.onsite');
     }
   };
 
   return (
     <section id="experience" className="section-container fade-in-section">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-center mb-12">Experiencia Profesional</h2>
+        <h2 className="text-center mb-12">{t('experience.title')}</h2>
 
         <div className="relative">
           {/* Timeline line */}

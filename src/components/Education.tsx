@@ -1,3 +1,5 @@
+import { useLanguage } from '../hooks/useLanguage';
+
 const educationData = [
   {
     type: "degree",
@@ -77,15 +79,17 @@ const certifications = [
 ];
 
 export default function Education() {
+  const { t } = useLanguage();
+
   return (
     <section id="education" className="section-container fade-in-section">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-center mb-12">Educación y Formación</h2>
+        <h2 className="text-center mb-12">{t('education.title')}</h2>
 
         {/* Education */}
         <div className="mb-16">
           <h3 className="text-2xl font-semibold text-secondary-800 mb-8 text-center">
-            Formación Académica
+            {t('education.academicTitle')}
           </h3>
           <div className="space-y-6">
             {educationData.map((edu, index) => (
@@ -119,7 +123,7 @@ export default function Education() {
         {/* Certifications */}
         <div>
           <h3 className="text-2xl font-semibold text-secondary-800 mb-8 text-center">
-            Certificaciones y Cursos
+            {t('education.certificationsTitle')}
           </h3>
           <div className="grid md:grid-cols-2 gap-6">
             {certifications.map((cert, index) => (
@@ -141,7 +145,7 @@ export default function Education() {
                       </span>
                       {cert.recent && (
                         <span className="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-medium">
-                          Reciente
+                          {t('education.recent')}
                         </span>
                       )}
                     </div>
@@ -156,12 +160,10 @@ export default function Education() {
         <div className="mt-16">
           <div className="card bg-gradient-to-r from-primary-50 to-secondary-50 border-primary-200/50 text-center">
             <h3 className="text-xl font-semibold text-secondary-800 mb-4">
-              Aprendizaje Continuo
+              {t('education.continuousLearningTitle')}
             </h3>
             <p className="text-secondary-600 max-w-2xl mx-auto">
-              La tecnología evoluciona constantemente, y mi compromiso es mantenerme actualizado
-              con las últimas tendencias y mejores prácticas en el desarrollo web.
-              Cada proyecto es una oportunidad para aprender algo nuevo.
+              {t('education.continuousLearningDesc')}
             </p>
           </div>
         </div>

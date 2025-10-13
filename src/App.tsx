@@ -7,21 +7,24 @@ import Skills from "./components/Skills";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
 import { useScrollAnimation } from "./hooks/useScrollAnimation";
+import { LanguageProvider } from "./contexts/LanguageContext";
 
 function App() {
   useScrollAnimation();
 
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Skills />
-      <Education />
-      <Contact />
-    </div>
+    <LanguageProvider>
+      <div className="min-h-screen">
+        <Navbar />
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Skills />
+        <Education />
+        <Contact />
+      </div>
+    </LanguageProvider>
   );
 }
 

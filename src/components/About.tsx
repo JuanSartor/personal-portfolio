@@ -1,8 +1,11 @@
+import { useLanguage } from '../hooks/useLanguage';
+
 export default function About() {
+  const { t } = useLanguage();
   return (
     <section id="about" className="section-container fade-in-section">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-center mb-12">Sobre mí</h2>
+        <h2 className="text-center mb-12">{t('about.title')}</h2>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
@@ -14,14 +17,15 @@ export default function About() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </span>
-                Pasión por la Tecnología
+                {t('about.passionTitle')}
               </h3>
               <p className="text-lg leading-relaxed">
-                Soy una persona <span className="font-semibold text-primary-600">responsable</span>,
-                <span className="font-semibold text-primary-600"> proactiva</span> y con muchas ganas de aprender.
-                Me apasiona encontrar soluciones eficientes y optimizarlas, siempre
-                buscando el equilibrio perfecto entre recursos disponibles y alcance
-                del proyecto.
+                {(t('about.description') as string).split('. ').map((sentence: string, index: number) => (
+                  <span key={index}>
+                    {sentence}{index < (t('about.description') as string).split('. ').length - 1 ? '. ' : ''}
+                    {index === 0 && <br className="hidden sm:block" />}
+                  </span>
+                ))}
               </p>
             </div>
 
@@ -33,9 +37,9 @@ export default function About() {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </span>
-                  <h4 className="font-semibold text-primary-700">Enfoque</h4>
+                  <h4 className="font-semibold text-primary-700">{t('about.focusTitle')}</h4>
                 </div>
-                <p className="text-sm text-primary-600">Soluciones escalables y eficientes</p>
+                <p className="text-sm text-primary-600">{t('about.focusDesc')}</p>
               </div>
 
               <div className="card bg-gradient-to-br from-secondary-50 to-secondary-100/50">
@@ -45,9 +49,9 @@ export default function About() {
                       <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </span>
-                  <h4 className="font-semibold text-secondary-700">Experiencia</h4>
+                  <h4 className="font-semibold text-secondary-700">{t('about.experienceTitle')}</h4>
                 </div>
-                <p className="text-sm text-secondary-600">Backend, Frontend y Cloud</p>
+                <p className="text-sm text-secondary-600">{t('about.experienceDesc')}</p>
               </div>
             </div>
           </div>
@@ -68,7 +72,7 @@ export default function About() {
 
               {/* Code snippet overlay */}
               <div className="absolute bottom-6 right-6 bg-secondary-900/90 backdrop-blur-md rounded-lg p-4 text-xs text-primary-400 font-mono border border-primary-500/30">
-                <div className="text-primary-300">// Siempre aprendiendo</div>
+                <div className="text-primary-300">{t('about.codeComment')}</div>
                 <div className="text-white">const developer = {`{`}</div>
                 <div className="text-white ml-2">passion: <span className="text-primary-400">'high'</span>,</div>
                 <div className="text-white ml-2">learning: <span className="text-primary-400">'continuous'</span></div>

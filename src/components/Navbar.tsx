@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
+import { useLanguage } from '../hooks/useLanguage';
+import LanguageSelector from './LanguageSelector';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,12 +16,12 @@ export default function Navbar() {
   }, []);
 
   const navItems = [
-    { href: '#about', label: 'Sobre mí' },
-    { href: '#experience', label: 'Experiencia' },
-    { href: '#projects', label: 'Proyectos' },
-    { href: '#skills', label: 'Skills' },
-    { href: '#education', label: 'Educación' },
-    { href: '#contact', label: 'Contacto' },
+    { href: '#about', label: t('nav.about') },
+    { href: '#experience', label: t('nav.experience') },
+    { href: '#projects', label: t('nav.projects') },
+    { href: '#skills', label: t('nav.skills') },
+    { href: '#education', label: t('nav.education') },
+    { href: '#contact', label: t('nav.contact') },
   ];
 
   return (
@@ -29,7 +32,7 @@ export default function Navbar() {
     }`}>
       <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
         {/* Logo */}
-        <div className="flex items-center">
+        <div className="flex items-center gap-4">
           <h1 className={`font-bold text-xl transition-colors duration-300 ${
             isScrolled ? 'text-primary-600' : 'text-secondary-900'
           }`}>
@@ -40,6 +43,7 @@ export default function Navbar() {
               Sartor
             </span>
           </h1>
+          <LanguageSelector />
         </div>
 
         {/* Desktop Navigation */}
