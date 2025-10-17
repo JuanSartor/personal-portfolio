@@ -23,7 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-src/components/Contact.tsx
 
 # Variables de entorno
 .env
